@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.34928.147
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LasApi", "LasApi\LasApi.csproj", "{432A16CE-E116-45CC-A7DE-628893DC8AA3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{432A16CE-E116-45CC-A7DE-628893DC8AA3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{432A16CE-E116-45CC-A7DE-628893DC8AA3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{432A16CE-E116-45CC-A7DE-628893DC8AA3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{432A16CE-E116-45CC-A7DE-628893DC8AA3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B1A58378-69E4-450F-ABCE-62417D91C0E2}
+	EndGlobalSection
+EndGlobal

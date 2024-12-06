@@ -1,0 +1,12 @@
+@LasApi_HostAddress = https://localhost:7282
+
+GET {{LasApi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
+
+GET {{LasApi_HostAddress}}/api/rest/values
+
+###
+POST {{LasApi_HostAddress}}/api/rest/create
+

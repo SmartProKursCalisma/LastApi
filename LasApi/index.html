@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.7.8/axios.min.js" crossorigin="anonymous"
+            referrerpolicy="no-referrer"></script>
+</head>
+
+
+
+<body>
+    <li id="text"></li>
+
+
+    <ul id="list">
+    </ul>
+</body>
+<script>
+    axios.get('https://localhost:7282/api/rest/Values')
+  .then(function (response) {
+    if (response.data.statusCode != 200) {
+        const failMessage = response.data.message;
+        const url = response.config.url;
+        if (response.data.showUser) {
+            document.getElementById("text").innerHTML = response.data.message
+        }
+        else{
+            console.log('url : '+ `${url}`)
+            const errorLog = ` Url : ${url} adresine yapılan istekte dönülen hata açıklaması = (${failMessage}) `;
+            axios.get(`https://localhost:7282/api/Log?log=${errorLog}`)
+            .then(function (response){
+                console.log(response)
+            })
+        }
+    }
+    else{
+        const html = document.getElementById('list');
+        const listData = response.data.data;
+        for (let index = 0; index < listData.length; index++) {
+            document.getElementById('list').innerHTML +=`<li>Id :  ${listData[index].id}
+            Ad Soyad :  ${listData[index].fullname}
+            Meslek :   ${listData[index].job}
+            </li>`;
+        }
+    }
+    console.log(response);
+  })
+  .catch(function (error) {
+    // handle error
+    console.log(error);
+  })
+  .finally(function () {
+    // always executed
+  });
+</script>
+
+</html>
